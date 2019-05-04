@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<html>
+<body>
+
+<img id='t2' src='".$secondaryimg1."' alt='' onerror='errorImage(this)' width='55' height='55' >;
+
+<script>
+  function errorImage(id) {
+      $(id).css("color","red");
+  }
+
+  $("#nexticon").click(function(){
+      // #t2 is a thumbnail , #two is an image
+      if ( $("#t2").css("color") == 'rgb(255, 0, 0)' || $("#t2").css("color") == undefined ) {
+            $("#two").remove();
+            $("#t2").remove();
+      }  
+  });
+</script>
+
+</body>
+</html>
